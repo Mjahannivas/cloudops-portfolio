@@ -18,7 +18,7 @@ const geistMono = Geist_Mono({
 })
 
 export const metadata: Metadata = {
-  title: 'Hasan Ashab - DevOps & Cloud Engineer Portfolio | AWS, Kubernetes, Docker',
+  title: 'Jahannivas - DevOps & Cloud Engineer Portfolio | AWS, Kubernetes, Docker',
   description:
     'Experienced DevOps and Cloud Engineer specializing in AWS, Kubernetes, Docker, and CI/CD. View my portfolio showcasing cloud infrastructure projects, automation solutions, and scalable deployments.',
   keywords: [
@@ -26,8 +26,8 @@ export const metadata: Metadata = {
     'cloud engineer portfolio', 
     'devops engineer',
     'cloud engineer',
-    'hasan ashab',
-    'hasan ashab portfolio',
+    'Jahannivas',
+    'Jahannivas portfolio',
     'portfolio website',
     'aws devops',
     'kubernetes engineer',
@@ -39,9 +39,9 @@ export const metadata: Metadata = {
     'ansible',
     'jenkins'
   ],
-  authors: [{ name: 'Hasan Ashab' }],
-  creator: 'Hasan Ashab',
-  publisher: 'Hasan Ashab',
+  authors: [{ name: 'Jahannivas' }],
+  creator: 'Jahannivas',
+  publisher: 'Jahannivas',
   robots: {
     index: true,
     follow: true,
@@ -57,21 +57,21 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'en_US',
     url: 'https://hasan-ashab.vercel.app',
-    title: 'Hasan Ashab - DevOps & Cloud Engineer Portfolio',
+    title: 'Jahannivas - DevOps & Cloud Engineer Portfolio',
     description: 'Experienced DevOps and Cloud Engineer specializing in AWS, Kubernetes, Docker, and CI/CD. View my portfolio showcasing cloud infrastructure projects.',
-    siteName: 'Hasan Ashab Portfolio',
+    siteName: 'Jahannivas Portfolio',
     images: [
       {
         url: '/profile-pic.png',
         width: 1200,
         height: 630,
-        alt: 'Hasan Ashab - DevOps & Cloud Engineer',
+        alt: 'Jahannivas - DevOps & Cloud Engineer',
       },
     ],
   },
   // twitter: {
   //   card: 'summary_large_image',
-  //   title: 'Hasan Ashab - DevOps & Cloud Engineer Portfolio',
+  //   title: 'Jahannivas - DevOps & Cloud Engineer Portfolio',
   //   description: 'Experienced DevOps and Cloud Engineer specializing in AWS, Kubernetes, Docker, and CI/CD.',
   //   images: ['/profile-pic.png'],
   //   creator: '@hasanashab',
@@ -92,7 +92,7 @@ export default function RootLayout({
   const jsonLd = {
     '@context': 'https://schema.org',
     '@type': 'Person',
-    name: 'Hasan Ashab',
+    name: 'Jahannivas',
     jobTitle: 'DevOps & Cloud Engineer',
     description: 'Experienced DevOps and Cloud Engineer specializing in AWS, Kubernetes, Docker, and CI/CD automation',
     url: 'https://hasan-ashab.vercel.app',

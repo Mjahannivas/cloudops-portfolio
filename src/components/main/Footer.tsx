@@ -62,7 +62,7 @@ const Footer: FC = () => {
           animate="visible"
         >
           <motion.div className="space-y-4" variants={childVariants}>
-            <h1 title="Hasan Ashab" className="text-2xl font-extrabold bg-clip-text">Hasan Ashab</h1>
+            <h1 title="Jahannivas" className="text-2xl font-extrabold bg-clip-text">Jahannivas</h1>
             <p className="text-sm text-muted-foreground leading-relaxed">
               DevOps & Cloud Engineer specializing in AWS, Kubernetes, Docker, and CI/CD automation. 
               Building scalable infrastructure aligned with company requirements.

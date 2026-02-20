@@ -2,7 +2,7 @@ import { Metadata } from 'next'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: 'DevOps Engineer - Hasan Ashab | AWS, Kubernetes, CI/CD Expert',
+  title: 'DevOps Engineer - Jahannivas | AWS, Kubernetes, CI/CD Expert',
   description: 'Professional DevOps engineer specializing in AWS cloud infrastructure, Kubernetes orchestration, Docker containerization, and CI/CD pipeline automation. Hire experienced DevOps consultant.',
   keywords: [
     'devops engineer',
@@ -27,7 +27,7 @@ export default function DevOpsEngineerPage() {
       <div className="container mx-auto px-4 py-16 max-w-4xl">
         <header className="mb-12">
           <h1 className="text-4xl md:text-5xl font-bold mb-6 text-foreground">
-            DevOps Engineer - Hasan Ashab
+            DevOps Engineer - Jahannivas
           </h1>
           <p className="text-xl text-muted-foreground leading-relaxed">
             Experienced DevOps engineer specializing in cloud infrastructure automation, 

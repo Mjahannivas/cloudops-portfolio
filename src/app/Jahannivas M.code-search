@@ -1,0 +1,48 @@
+# Query: Hasan Ashab
+
+28 results - 9 files
+
+public/manifest.json:
+  2:   "name": "Jahannivas M - DevOps & Cloud Engineer Portfolio",
+  3:   "short_name": "Jahannivas M",
+
+src/app/layout.tsx:
+  21:   title: 'Jahannivas M - DevOps & Cloud Engineer Portfolio | AWS, Kubernetes, Docker',
+  29:     'Jahannivas M',
+  30:     'Jahannivas M portfolio',
+  42:   authors: [{ name: 'Jahannivas M' }],
+  43:   creator: 'Jahannivas M',
+  44:   publisher: 'Jahannivas M',
+  60:     title: 'Jahannivas M - DevOps & Cloud Engineer Portfolio',
+  62:     siteName: 'Jahannivas M Portfolio',
+  68:         alt: 'Jahannivas M - DevOps & Cloud Engineer',
+  74:   //   title: 'Jahannivas M - DevOps & Cloud Engineer Portfolio',
+  95:     name: 'Jahannivas M',
+
+src/app/blog/devops-best-practices/page.tsx:
+   5:   title: 'DevOps Best Practices 2024 - Complete Guide by Jahannivas M',
+   6:   description: 'Comprehensive guide to DevOps best practices including CI/CD, infrastructure as code, monitoring, and security. Learn from experienced DevOps engineer Jahannivas M.',
+  25:     authors: ['Jahannivas M'],
+  39:               <span>By Jahannivas M</span>
+
+src/app/cloud-engineer/page.tsx:
+   5:   title: 'Cloud Engineer Portfolio - Jahannivas M | AWS, Azure, GCP Specialist',
+  30:             Cloud Engineer Portfolio - Jahannivas M
+
+src/app/devops-engineer/page.tsx:
+   5:   title: 'DevOps Engineer - Jahannivas M | AWS, Kubernetes, CI/CD Expert',
+  30:             DevOps Engineer - Jahannivas M
+
+src/components/main/Footer.tsx:
+  65:             <h1 title="Jahannivas M" className="text-2xl font-extrabold bg-clip-text">Jahannivas M</h1>
+
+src/components/sub/HeroContent.tsx:
+  98:               Jahannivas M
+
+src/components/sub/HeroContentWithAnalytics.tsx:
+  98:               Jahannivas M
+
+src/components/ui/resizable-navbar.tsx:
+  263:         alt="Jahannivas M"
+  269:         <span title="Jahannivas M" className="text-lg font-bold group-hover:text-red-500 transition-colors">
+  270:           Jahannivas M
