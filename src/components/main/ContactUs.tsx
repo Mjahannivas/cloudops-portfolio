@@ -135,10 +135,10 @@ const ContactUs: FC = () => {
               <div className="space-y-5 text-foreground">
                 <div className="flex items-center gap-3">
                   <FaEnvelope className="text-primary text-lg" />
-                  <span className="text-sm font-medium select-text">hasanashab.18205@gmail.com</span>
+                  <span className="text-sm font-medium select-text">mjahannivas@gmail.com</span>
                   <button
                     title="Copy email address"
-                    onClick={() => copyToClipboard('hasanashab.18205@gmail.com', 'Email')}
+                    onClick={() => copyToClipboard('mjahannivas@gmail.com', 'Email')}
                     className="text-muted-foreground hover:text-primary transition"
                     aria-label="Copy email"
                   >
@@ -147,10 +147,10 @@ const ContactUs: FC = () => {
                 </div>
                 <div className="flex items-center gap-3">
                   <FaSquarePhone className="text-primary text-lg" />
-                  <span className="text-sm font-medium select-text">+880 16273 18919</span>
+                  <span className="text-sm font-medium select-text">+918667708095</span>
                   <button
                     title="Copy phone number"
-                    onClick={() => copyToClipboard('+880 16273 18919', 'Phone number')}
+                    onClick={() => copyToClipboard('+918667708095', 'Phone number')}
                     className="text-muted-foreground hover:text-primary transition"
                     aria-label="Copy phone number"
                   >
@@ -159,7 +159,7 @@ const ContactUs: FC = () => {
                 </div>
                 <div className="flex items-center gap-3">
                   <FaMapMarkerAlt className="text-primary text-lg" />
-                  <span className="text-sm font-medium select-text">Dhaka, Bangladesh</span>
+                  <span className="text-sm font-medium select-text">Coimbatore</span>
                 </div>
               </div>
             </motion.div>
