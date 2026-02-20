@@ -95,8 +95,7 @@ const HeroContentWithAnalytics: FC = () => {
         <div className="relative">
           <h1 className="text-5xl sm:text-6xl lg:text-7xl xl:text-8xl font-black tracking-tight">
             <span className="bg-gradient-to-r from-foreground via-primary to-blue-500 bg-clip-text text-transparent">
-              Hasan Ashab
-            </span>
+              Jahannivas M            </span>
           </h1>
 
           {/* Decorative Elements */}
