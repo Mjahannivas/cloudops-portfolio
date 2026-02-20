@@ -15,7 +15,7 @@ const Footer: FC = () => {
       label: 'GitHub',
     },
     {
-      href: 'https://www.linkedin.com/in/Jahannivas/',
+      href: 'https://www.linkedin.com/in/nivas-m/',
       icon: <FaLinkedin className="w-5 h-5" />,
       label: 'LinkedIn',
     },

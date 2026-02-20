@@ -99,7 +99,7 @@ export default function RootLayout({
     image: 'https://Jahannivas.vercel.app/profile-pic.jpg',
     sameAs: [
       'https://github.com/Mjahannivas',
-      'https://linkedin.com/in/Jahannivas',
+      'https://linkedin.com/in/nivas-m',
     ],
     knowsAbout: [
       'DevOps',

@@ -1,11 +1,10 @@
-import { Analytics } from '@vercel/analytics/next';
+import { Analytics } from '@vercel/analytics/next'
 import Footer from '@/components/main/Footer'
 import { Navbar } from '@/components/main/Navbar'
 import { ThemeProvider } from '@/components/theme-provider'
 import { AnalyticsProvider } from '@/components/analytics/AnalyticsProvider'
 import type { Metadata } from 'next'
 import { Geist, Geist_Mono } from 'next/font/google'
-
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
@@ -18,26 +17,21 @@ const geistMono = Geist_Mono({
 })
 
 export const metadata: Metadata = {
-  title: 'Jahannivas - DevOps & Cloud Engineer Portfolio | AWS, Kubernetes, Docker',
+  metadataBase: new URL('https://portfolio.mjahannivas.xyz'),
+  title: 'Jahannivas | Cloud-Ops Engineer | AWS • Kubernetes • DevOps',
   description:
-    'Experienced DevOps and Cloud Engineer specializing in AWS, Kubernetes, Docker, and CI/CD. View my portfolio showcasing cloud infrastructure projects, automation solutions, and scalable deployments.',
+    'Cloud-Ops Engineer at Ellucian specializing in AWS, Kubernetes, Docker, Terraform, and CI/CD automation.',
   keywords: [
-    'devops portfolio',
-    'cloud engineer portfolio', 
-    'devops engineer',
-    'cloud engineer',
     'Jahannivas',
-    'Jahannivas portfolio',
-    'portfolio website',
-    'aws devops',
-    'kubernetes engineer',
-    'docker specialist',
-    'ci cd pipeline',
-    'infrastructure automation',
-    'cloud architecture',
-    'terraform',
-    'ansible',
-    'jenkins'
+    'Cloud Ops Engineer',
+    'DevOps Engineer',
+    'AWS',
+    'Kubernetes',
+    'Terraform',
+    'Docker',
+    'CI/CD',
+    'Infrastructure as Code',
+    'Ellucian'
   ],
   authors: [{ name: 'Jahannivas' }],
   creator: 'Jahannivas',
@@ -45,39 +39,26 @@ export const metadata: Metadata = {
   robots: {
     index: true,
     follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
-    },
   },
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://Jahannivas.vercel.app',
-    title: 'Jahannivas - DevOps & Cloud Engineer Portfolio',
-    description: 'Experienced DevOps and Cloud Engineer specializing in AWS, Kubernetes, Docker, and CI/CD. View my portfolio showcasing cloud infrastructure projects.',
+    url: 'https://portfolio.mjahannivas.xyz',
+    title: 'Jahannivas | Cloud-Ops Engineer Portfolio',
+    description:
+      'Explore my DevOps and Cloud Engineering portfolio showcasing AWS, Kubernetes, and Terraform expertise.',
     siteName: 'Jahannivas Portfolio',
     images: [
       {
-        url: '/profile-pic.png',
+        url: '/profile-pic.jpg',
         width: 1200,
         height: 630,
-        alt: 'Jahannivas - DevOps & Cloud Engineer',
+        alt: 'Jahannivas - Cloud-Ops Engineer',
       },
     ],
   },
-  // twitter: {
-  //   card: 'summary_large_image',
-  //   title: 'Jahannivas - DevOps & Cloud Engineer Portfolio',
-  //   description: 'Experienced DevOps and Cloud Engineer specializing in AWS, Kubernetes, Docker, and CI/CD.',
-  //   images: ['/profile-pic.png'],
-  //   creator: '@hasanashab',
-  // },
   alternates: {
-    canonical: 'https://Jahannivas.vercel.app',
+    canonical: 'https://portfolio.mjahannivas.xyz',
   },
   verification: {
     google: 'wUvigUYIHyBvrQMmeBFTg5ixr4HDAdPcPPlyPJSzmc0',
@@ -86,39 +67,36 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode
-}>) {
+}) {
   const jsonLd = {
     '@context': 'https://schema.org',
     '@type': 'Person',
     name: 'Jahannivas',
-    jobTitle: 'DevOps & Cloud Engineer',
-    description: 'Experienced DevOps and Cloud Engineer specializing in AWS, Kubernetes, Docker, and CI/CD automation',
-    url: 'https://Jahannivas.vercel.app',
-    image: 'https://Jahannivas.vercel.app/profile-pic.jpg',
+    jobTitle: 'Cloud-Ops Engineer',
+    description:
+      'Cloud-Ops Engineer specializing in AWS, Kubernetes, Terraform, CI/CD automation and production SaaS infrastructure.',
+    url: 'https://portfolio.mjahannivas.xyz',
+    image: 'https://portfolio.mjahannivas.xyz/profile-pic.jpg',
     sameAs: [
       'https://github.com/Mjahannivas',
-      'https://linkedin.com/in/Jahannivas',
-    ],
-    knowsAbout: [
-      'DevOps',
-      'Cloud Engineering', 
-      'AWS',
-      'Kubernetes',
-      'Docker',
-      'CI/CD',
-      'Infrastructure as Code',
-      'Terraform',
-      'Ansible',
-      'Jenkins',
-      'Monitoring',
-      'Automation'
+      'https://www.linkedin.com/in/nivas-m/',
     ],
     worksFor: {
       '@type': 'Organization',
-      name: 'Elevate Labs'
-    }
+      name: 'Ellucian',
+    },
+    knowsAbout: [
+      'DevOps',
+      'Cloud Engineering',
+      'AWS',
+      'Kubernetes',
+      'Docker',
+      'Terraform',
+      'CI/CD',
+      'Infrastructure Automation',
+    ],
   }
 
   return (
@@ -128,13 +106,13 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
-        <link rel="canonical" href="https://Jahannivas.vercel.app" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="theme-color" content="#3b82f6" media="(prefers-color-scheme: light)" />
-        <meta name="theme-color" content="#1e40af" media="(prefers-color-scheme: dark)" />
-        <meta name="color-scheme" content="light dark" />
+        <meta name="theme-color" content="#111827" />
       </head>
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased overflow-x-hidden`}>
+
+      <body
+        className={`${geistSans.variable} ${geistMono.variable} antialiased overflow-x-hidden`}
+      >
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
@@ -143,12 +121,11 @@ export default function RootLayout({
         >
           <AnalyticsProvider>
             <Navbar />
-            <main role="main">
-              {children}
-            </main>
+            <main>{children}</main>
             <Footer />
           </AnalyticsProvider>
         </ThemeProvider>
+
         <Analytics />
       </body>
     </html>
