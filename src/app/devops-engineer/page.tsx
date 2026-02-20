@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     'ansible automation'
   ],
   alternates: {
-    canonical: 'https://hasan-ashab.vercel.app/devops-engineer',
+    canonical: 'https://Jahannivas.vercel.app/devops-engineer',
   },
 }
 

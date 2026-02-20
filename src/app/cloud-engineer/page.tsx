@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     'cloud security'
   ],
   alternates: {
-    canonical: 'https://hasan-ashab.vercel.app/cloud-engineer',
+    canonical: 'https://Jahannivas.vercel.app/cloud-engineer',
   },
 }
 

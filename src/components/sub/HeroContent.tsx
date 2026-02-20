@@ -160,7 +160,7 @@ const HeroContent: FC = () => {
               title="Visit LinkedIn profile"
               variant="secondary"
               className="group bg-card/60 backdrop-blur-sm border-blue-500/30 hover:border-blue-500/60 hover:bg-blue-500/10 px-6 py-4 rounded-xl transition-all duration-300 transform hover:scale-105 shadow-md hover:shadow-lg"
-              href="https://www.linkedin.com/in/hasan-ashab/"
+              href="https://www.linkedin.com/in/Jahannivas/"
             >
               <FaLinkedin  title="Visit LinkedIn profile" className="w-5 h-5 group-hover:rotate-12 transition-transform duration-300" />
             </NavbarButton>
