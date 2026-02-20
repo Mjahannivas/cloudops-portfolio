@@ -98,7 +98,7 @@ export default function RootLayout({
     url: 'https://Jahannivas.vercel.app',
     image: 'https://Jahannivas.vercel.app/profile-pic.jpg',
     sameAs: [
-      'https://github.com/HasanAshab',
+      'https://github.com/Mjahannivas',
       'https://linkedin.com/in/Jahannivas',
     ],
     knowsAbout: [
