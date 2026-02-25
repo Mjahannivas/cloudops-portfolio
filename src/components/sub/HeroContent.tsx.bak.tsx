@@ -40,6 +40,9 @@ const HeroContent: FC = () => {
   }
 
   const handleConnectClick = (e: React.MouseEvent<HTMLElement>) => {
+    // Track the click
+    // trackClick(e, 'hero-connect-button', 'Let\'s Connect')
+
     const contactSection = document.getElementById('contact')
     if (contactSection) {
       smoothScrollTo(contactSection, 1500)
@@ -77,36 +80,37 @@ const HeroContent: FC = () => {
     >
       {/* Interactive Cursor Follower */}
       <div
-        className="fixed pointer-events-none z-0 w-6 h-6 bg-violet-500/20 rounded-full blur-sm transition-all duration-300 ease-out"
+        className="fixed pointer-events-none z-0 w-6 h-6 bg-primary/20 rounded-full blur-sm transition-all duration-300 ease-out"
         style={{
           left: mousePosition.x - 12,
           top: mousePosition.y - 12,
         }}
       />
 
+
+
       {/* Main Content Area */}
       <motion.div variants={itemVariants} className="space-y-6">
         {/* Name with Gradient Effect */}
         <div className="relative">
           <h1 title='name' className="text-5xl sm:text-6xl lg:text-7xl xl:text-8xl font-black tracking-tight">
-            <span title='name' className="bg-gradient-to-r from-blue-500 via-violet-500 to-purple-600 bg-clip-text text-transparent">
-              Jahannivas M
-            </span>
+            <span title='name' className="bg-gradient-to-r from-foreground via-primary to-blue-500 bg-clip-text text-transparent">
+              Jahannivas M            </span>
           </h1>
 
           {/* Decorative Elements */}
-          <div className="absolute -top-4 -right-4 w-8 h-8 bg-violet-500/30 rounded-full animate-bounce"></div>
+          <div className="absolute -top-4 -right-4 w-8 h-8 bg-primary/20 rounded-full animate-bounce"></div>
           <div className="absolute -bottom-2 -left-2 w-6 h-6 bg-blue-500/30 rounded-full animate-pulse"></div>
         </div>
 
         {/* Role with Modern Design */}
         <div className="relative">
-          <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 via-violet-500/10 to-purple-500/10 rounded-2xl blur-xl"></div>
-          <div className="relative bg-card/40 backdrop-blur-sm border border-violet-500/20 rounded-2xl p-6 shadow-2xl">
-            <h2 title="DevOps & Cloud Engineer" className="text-2xl sm:text-3xl lg:text-4xl font-bold bg-gradient-to-r from-blue-500 via-violet-500 to-purple-600 bg-clip-text text-transparent mb-3">
+          <div className="absolute inset-0 bg-gradient-to-r from-primary/10 via-blue-500/10 to-primary/10 rounded-2xl blur-xl"></div>
+          <div className="relative bg-card/40 backdrop-blur-sm border border-primary/20 rounded-2xl p-6 shadow-2xl">
+            <h2 title="DevOps & Cloud Engineer" className="text-2xl sm:text-3xl lg:text-4xl font-bold bg-gradient-to-r from-primary via-blue-500 to-primary bg-clip-text text-transparent mb-3">
               DevOps & Cloud Engineer
             </h2>
-            <div className="w-24 h-1 bg-gradient-to-r from-blue-500 via-violet-500 to-purple-600 rounded-full mx-auto"></div>
+            <div className="w-24 h-1 bg-gradient-to-r from-primary to-blue-500 rounded-full mx-auto"></div>
           </div>
         </div>
 
@@ -125,8 +129,9 @@ const HeroContent: FC = () => {
         className="flex flex-col sm:flex-row items-center gap-4 mt-8 mb-16"
       >
         <NavbarButton
+          
           variant="primary"
-          className="group relative overflow-hidden bg-gradient-to-r from-blue-600 to-violet-600 hover:from-violet-600 hover:to-blue-600 text-white px-8 py-4 rounded-xl font-semibold text-lg shadow-lg hover:shadow-violet-500/25 hover:shadow-xl transition-all duration-300 transform hover:scale-105"
+          className="group relative overflow-hidden bg-gradient-to-r from-primary to-blue-500 hover:from-blue-500 hover:to-primary text-primary-foreground px-8 py-4 rounded-xl font-semibold text-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
           onClick={handleConnectClick}
         >
           <div className="flex items-center gap-3">
@@ -134,7 +139,7 @@ const HeroContent: FC = () => {
             Let's Connect
             <div className="w-2 h-2 bg-white/80 rounded-full animate-pulse"></div>
           </div>
-          <div title="Let's Connect - Navigate to contact section" className="absolute inset-0 bg-white/10 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></div>
+          <div title="Let's Connect - Navigate to contact section" className="absolute inset-0 bg-white/20 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></div>
         </NavbarButton>
 
         <div className="flex items-center gap-3">
@@ -142,7 +147,7 @@ const HeroContent: FC = () => {
             <NavbarButton
               title="Visit GitHub profile"
               variant="secondary"
-              className="group bg-card/60 backdrop-blur-sm border-blue-500/30 hover:border-blue-500/60 hover:bg-blue-500/10 px-6 py-4 rounded-xl transition-all duration-300 transform hover:scale-105 shadow-md hover:shadow-lg"
+              className="group bg-card/60 backdrop-blur-sm border-primary/30 hover:border-primary/60 hover:bg-primary/10 px-6 py-4 rounded-xl transition-all duration-300 transform hover:scale-105 shadow-md hover:shadow-lg"
               href="https://github.com/Mjahannivas"
             >
               <FaGithub className="w-5 h-5 group-hover:rotate-12 transition-transform duration-300" />
@@ -153,10 +158,10 @@ const HeroContent: FC = () => {
             <NavbarButton
               title="Visit LinkedIn profile"
               variant="secondary"
-              className="group bg-card/60 backdrop-blur-sm border-violet-500/30 hover:border-violet-500/60 hover:bg-violet-500/10 px-6 py-4 rounded-xl transition-all duration-300 transform hover:scale-105 shadow-md hover:shadow-lg"
+              className="group bg-card/60 backdrop-blur-sm border-blue-500/30 hover:border-blue-500/60 hover:bg-blue-500/10 px-6 py-4 rounded-xl transition-all duration-300 transform hover:scale-105 shadow-md hover:shadow-lg"
               href="https://www.linkedin.com/in/nivas-m/"
             >
-              <FaLinkedin title="Visit LinkedIn profile" className="w-5 h-5 group-hover:rotate-12 transition-transform duration-300" />
+              <FaLinkedin  title="Visit LinkedIn profile" className="w-5 h-5 group-hover:rotate-12 transition-transform duration-300" />
             </NavbarButton>
           </TrackableContact>
         </div>
@@ -169,8 +174,8 @@ const HeroContent: FC = () => {
       >
         <div className="flex flex-col items-center gap-2 text-muted-foreground">
           <span className="text-sm font-medium">Scroll to explore</span>
-          <div className="w-6 h-10 border-2 border-violet-500/30 rounded-full flex justify-center">
-            <div className="w-1 h-3 bg-gradient-to-b from-blue-500 to-violet-500 rounded-full mt-2 animate-bounce"></div>
+          <div className="w-6 h-10 border-2 border-primary/30 rounded-full flex justify-center">
+            <div className="w-1 h-3 bg-primary rounded-full mt-2 animate-bounce"></div>
           </div>
         </div>
       </motion.div>
