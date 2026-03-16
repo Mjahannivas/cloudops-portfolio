@@ -6,6 +6,22 @@ import { AnalyticsProvider } from '@/components/analytics/AnalyticsProvider'
 import type { Metadata } from 'next'
 import { Geist, Geist_Mono } from 'next/font/google'
 import './globals.css'
+import { SiPagespeedinsights } from 'react-icons/si';
+
+# Analytics & SiPagespeedinsights
+
+import { Analytics } from '@vercel/analytics/react';
+import { SpeedInsights } from '@vercel/speed-insights/next';
+
+export default function App({ Component, pageProps }) {
+  return (
+    <>
+      <Component {...pageProps} />
+      <Analytics />
+      <SpeedInsights />
+    </>
+  );
+}
 
 const geistSans = Geist({
   variable: '--font-geist-sans',

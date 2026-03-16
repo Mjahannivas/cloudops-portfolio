@@ -1,0 +1,42 @@
+stages:
+  - build
+  - deploy
+
+variables:
+  # Set these in GitLab CI/CD Variables: AWS_ACCESS_KEY_ID, AWS_SECRET_ACCESS_KEY
+  AWS_DEFAULT_REGION: "us-east-1"
+  ECR_REGISTRY: "${AWS_ACCOUNT_ID}.dkr.ecr.${AWS_DEFAULT_REGION}.amazonaws.com"
+  ECR_REPOSITORY: "portfolio-app"
+  IMAGE_TAG: $CI_PIPELINE_IID
+
+build_and_push:
+  stage: build
+  image: docker:24.0.5
+  services:
+    - docker:24.0.5-dind
+  before_script:
+    - apk add --no-cache aws-cli
+    - aws ecr get-login-password --region $AWS_DEFAULT_REGION | docker login --username AWS --password-stdin $ECR_REGISTRY
+  script:
+    - docker build -t $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG .
+    - docker push $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
+    - docker tag $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG $ECR_REGISTRY/$ECR_REPOSITORY:latest
+    - docker push $ECR_REGISTRY/$ECR_REPOSITORY:latest
+
+deploy_to_k8s:
+  stage: deploy
+  image: bitnami/kubectl:latest
+  before_script:
+    # Authenticate to EKS
+    - aws eks --region $AWS_DEFAULT_REGION update-kubeconfig --name portfolio-cluster
+  script:
+    # Apply the ConfigMap first
+    - kubectl apply -f k8s/nginx-configmap.yaml
+    # Update the image in the deployment file dynamically
+    - sed -i "s|<ACCOUNT_ID>.dkr.ecr.<REGION>.amazonaws.com/portfolio-app:latest|$ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG|g" k8s/deployment.yaml
+    - kubectl apply -f k8s/deployment.yaml
+    - kubectl apply -f k8s/service.yaml
+    # Wait for the rollout to succeed
+    - kubectl rollout status deployment/portfolio-deployment
+  environment:
+    name: production
