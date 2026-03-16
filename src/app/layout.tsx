@@ -107,6 +107,19 @@ export default function RootLayout({
         <meta name="theme-color" content="#4f46e5" media="(prefers-color-scheme: dark)" />
         <meta name="color-scheme" content="light dark" />
         <script src="https://t.contentsquare.net/uxa/64c4c7721e734.js" async />
+        {/* Microsoft Clarity */}
+          <script
+            dangerouslySetInnerHTML={{
+            __html: `
+            (function(c,l,a,r,i,t,y){
+            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+            })(window, document, "clarity", "script", "688580");
+    `,
+  }}
+/>
+
         <style dangerouslySetInnerHTML={{ __html: `
           @keyframes gAurora1 {
             0%   { transform: translate(0px, 0px) scale(1); }
