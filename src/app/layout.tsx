@@ -106,6 +106,7 @@ export default function RootLayout({
         <meta name="theme-color" content="#7c3aed" media="(prefers-color-scheme: light)" />
         <meta name="theme-color" content="#4f46e5" media="(prefers-color-scheme: dark)" />
         <meta name="color-scheme" content="light dark" />
+        <script src="https://t.contentsquare.net/uxa/64c4c7721e734.js" async />
         <style dangerouslySetInnerHTML={{ __html: `
           @keyframes gAurora1 {
             0%   { transform: translate(0px, 0px) scale(1); }
