@@ -1,4 +1,5 @@
 import { Analytics } from '@vercel/analytics/next';
+import { SpeedInsights } from '@vercel/speed-insights/next';
 import Footer from '@/components/main/Footer'
 import { Navbar } from '@/components/main/Navbar'
 import { ThemeProvider } from '@/components/theme-provider'
@@ -6,22 +7,6 @@ import { AnalyticsProvider } from '@/components/analytics/AnalyticsProvider'
 import type { Metadata } from 'next'
 import { Geist, Geist_Mono } from 'next/font/google'
 import './globals.css'
-import { SiPagespeedinsights } from 'react-icons/si';
-
-# Analytics & SiPagespeedinsights
-
-import { Analytics } from '@vercel/analytics/react';
-import { SpeedInsights } from '@vercel/speed-insights/next';
-
-export default function App({ Component, pageProps }) {
-  return (
-    <>
-      <Component {...pageProps} />
-      <Analytics />
-      <SpeedInsights />
-    </>
-  );
-}
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
@@ -38,22 +23,10 @@ export const metadata: Metadata = {
   description:
     'Experienced DevOps and Cloud Engineer specializing in AWS, Kubernetes, Docker, and CI/CD. View my portfolio showcasing cloud infrastructure projects, automation solutions, and scalable deployments.',
   keywords: [
-    'devops portfolio',
-    'cloud engineer portfolio',
-    'devops engineer',
-    'cloud engineer',
-    'Jahannivas',
-    'Jahannivas portfolio',
-    'portfolio website',
-    'aws devops',
-    'kubernetes engineer',
-    'docker specialist',
-    'ci cd pipeline',
-    'infrastructure automation',
-    'cloud architecture',
-    'terraform',
-    'ansible',
-    'jenkins'
+    'devops portfolio', 'cloud engineer portfolio', 'devops engineer',
+    'cloud engineer', 'Jahannivas', 'aws devops', 'kubernetes engineer',
+    'docker specialist', 'ci cd pipeline', 'infrastructure automation',
+    'terraform', 'ansible', 'jenkins'
   ],
   authors: [{ name: 'Jahannivas' }],
   creator: 'Jahannivas',
@@ -72,9 +45,9 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://Jahannivas.vercel.app',
+    url: 'https://portfolio.mjahannivas.xyz',
     title: 'Jahannivas - DevOps & Cloud Engineer Portfolio',
-    description: 'Experienced DevOps and Cloud Engineer specializing in AWS, Kubernetes, Docker, and CI/CD. View my portfolio showcasing cloud infrastructure projects.',
+    description: 'Experienced DevOps and Cloud Engineer specializing in AWS, Kubernetes, Docker, and CI/CD.',
     siteName: 'Jahannivas Portfolio',
     images: [
       {
@@ -86,7 +59,7 @@ export const metadata: Metadata = {
     ],
   },
   alternates: {
-    canonical: 'https://Jahannivas.vercel.app',
+    canonical: 'https://portfolio.mjahannivas.xyz',  // ✅ fixed
   },
   verification: {
     google: 'wUvigUYIHyBvrQMmeBFTg5ixr4HDAdPcPPlyPJSzmc0',
@@ -104,8 +77,8 @@ export default function RootLayout({
     name: 'Jahannivas',
     jobTitle: 'DevOps & Cloud Engineer',
     description: 'Experienced DevOps and Cloud Engineer specializing in AWS, Kubernetes, Docker, and CI/CD automation',
-    url: 'https://Jahannivas.vercel.app',
-    image: 'https://Jahannivas.vercel.app/profile-pic.jpg',
+    url: 'https://portfolio.mjahannivas.xyz',
+    image: 'https://portfolio.mjahannivas.xyz/profile-pic.png',
     sameAs: [
       'https://github.com/Mjahannivas',
       'https://linkedin.com/in/nivas-m',
@@ -117,7 +90,7 @@ export default function RootLayout({
     ],
     worksFor: {
       '@type': 'Organization',
-      name: 'Elevate Labs'
+      name: 'Ellucian'
     }
   }
 
@@ -128,13 +101,11 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
-        <link rel="canonical" href="https://Jahannivas.vercel.app" />
+        <link rel="canonical" href="https://portfolio.mjahannivas.xyz" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="theme-color" content="#7c3aed" media="(prefers-color-scheme: light)" />
         <meta name="theme-color" content="#4f46e5" media="(prefers-color-scheme: dark)" />
         <meta name="color-scheme" content="light dark" />
-
-        {/* Global Aurora Keyframes */}
         <style dangerouslySetInnerHTML={{ __html: `
           @keyframes gAurora1 {
             0%   { transform: translate(0px, 0px) scale(1); }
@@ -173,74 +144,31 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <AnalyticsProvider>
-
-            {/* ── GLOBAL AURORA BACKGROUND ── covers the entire page with no patches ── */}
-            <div
-              className="fixed inset-0 -z-50 overflow-hidden pointer-events-none"
-              aria-hidden="true"
-            >
-              {/* Base background */}
+            {/* GLOBAL AURORA BACKGROUND */}
+            <div className="fixed inset-0 -z-50 overflow-hidden pointer-events-none" aria-hidden="true">
               <div className="absolute inset-0 bg-background" />
-
-              {/* Orb 1 — violet, top-left, slow */}
-              <div
-                className="absolute -top-60 -left-60 w-[900px] h-[900px] rounded-full opacity-[0.18] blur-[140px]"
-                style={{
-                  background: 'radial-gradient(circle, #7c3aed 0%, #4f46e5 40%, transparent 70%)',
-                  animation: 'gAurora1 18s ease-in-out infinite alternate',
-                }}
-              />
-
-              {/* Orb 2 — blue, top-right, medium */}
-              <div
-                className="absolute -top-40 -right-60 w-[800px] h-[800px] rounded-full opacity-[0.15] blur-[130px]"
-                style={{
-                  background: 'radial-gradient(circle, #3b82f6 0%, #6366f1 50%, transparent 70%)',
-                  animation: 'gAurora2 22s ease-in-out infinite alternate',
-                }}
-              />
-
-              {/* Orb 3 — purple, mid-left */}
-              <div
-                className="absolute top-[40%] -left-40 w-[700px] h-[700px] rounded-full opacity-[0.12] blur-[120px]"
-                style={{
-                  background: 'radial-gradient(circle, #8b5cf6 0%, #3b82f6 50%, transparent 70%)',
-                  animation: 'gAurora3 26s ease-in-out infinite alternate',
-                }}
-              />
-
-              {/* Orb 4 — indigo, bottom-right */}
-              <div
-                className="absolute bottom-0 -right-40 w-[700px] h-[700px] rounded-full opacity-[0.13] blur-[120px]"
-                style={{
-                  background: 'radial-gradient(circle, #4f46e5 0%, #7c3aed 50%, transparent 70%)',
-                  animation: 'gAurora4 30s ease-in-out infinite alternate',
-                }}
-              />
-
-              {/* Orb 5 — center shimmer band */}
-              <div
-                className="absolute top-[55%] left-1/2 w-[1000px] h-[350px] rounded-full opacity-[0.07] blur-[100px]"
-                style={{
-                  background: 'linear-gradient(90deg, #7c3aed, #3b82f6, #8b5cf6)',
-                  animation: 'gAurora5 14s ease-in-out infinite alternate',
-                }}
-              />
-
-              {/* Global subtle grid overlay */}
+              <div className="absolute -top-60 -left-60 w-[900px] h-[900px] rounded-full opacity-[0.18] blur-[140px]"
+                style={{ background: 'radial-gradient(circle, #7c3aed 0%, #4f46e5 40%, transparent 70%)', animation: 'gAurora1 18s ease-in-out infinite alternate' }} />
+              <div className="absolute -top-40 -right-60 w-[800px] h-[800px] rounded-full opacity-[0.15] blur-[130px]"
+                style={{ background: 'radial-gradient(circle, #3b82f6 0%, #6366f1 50%, transparent 70%)', animation: 'gAurora2 22s ease-in-out infinite alternate' }} />
+              <div className="absolute top-[40%] -left-40 w-[700px] h-[700px] rounded-full opacity-[0.12] blur-[120px]"
+                style={{ background: 'radial-gradient(circle, #8b5cf6 0%, #3b82f6 50%, transparent 70%)', animation: 'gAurora3 26s ease-in-out infinite alternate' }} />
+              <div className="absolute bottom-0 -right-40 w-[700px] h-[700px] rounded-full opacity-[0.13] blur-[120px]"
+                style={{ background: 'radial-gradient(circle, #4f46e5 0%, #7c3aed 50%, transparent 70%)', animation: 'gAurora4 30s ease-in-out infinite alternate' }} />
+              <div className="absolute top-[55%] left-1/2 w-[1000px] h-[350px] rounded-full opacity-[0.07] blur-[100px]"
+                style={{ background: 'linear-gradient(90deg, #7c3aed, #3b82f6, #8b5cf6)', animation: 'gAurora5 14s ease-in-out infinite alternate' }} />
               <div className="absolute inset-0 bg-[linear-gradient(rgba(139,92,246,0.025)_1px,transparent_1px),linear-gradient(90deg,rgba(59,130,246,0.025)_1px,transparent_1px)] bg-[size:60px_60px]" />
             </div>
-            {/* ── END GLOBAL AURORA ── */}
 
             <Navbar />
             <main role="main">
               {children}
             </main>
             <Footer />
-
           </AnalyticsProvider>
         </ThemeProvider>
         <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   )
